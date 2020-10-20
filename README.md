@@ -1,2 +1,2 @@
-# bgm
-A blog program build by gin and markdown.
+# BGM
+BGM means a blog program build by gin and markdown.
