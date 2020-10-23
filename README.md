@@ -6,7 +6,7 @@ BGM means a blog program build by [Gin Web Framework](https://github.com/gin-gon
 
 ### Download & Start
 
-Download the latest release binary file from [Github 的 BGM Release 页面](https://github.com/lucups/bgm/releases/), and run it by this command:
+Download the latest release binary file from [Github - The Release Page of BGM](https://github.com/lucups/bgm/releases/), and run it by this command:
 
 ```
 ./bgm
