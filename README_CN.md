@@ -78,7 +78,7 @@ Hello everyone!
 当然，您可以随心所欲地修改原生的模板文件，使之达到您想要的效果。
 
 
-### 项目呢依赖
+### 项目依赖
 
 - [Gin Web Framework](https://github.com/gin-gonic/gin) A web framework written in Go. 
 - [Pongo2](https://github.com/flosch/pongo2) A Django-syntax like templating-language. (Also like Jinja/Twig/Nunjucks)
