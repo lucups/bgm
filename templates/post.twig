@@ -1,0 +1,9 @@
+{% extends 'layout.twig' %}
+
+{% block main %}
+    <h1>{{ meta.Title }}</h1>
+    <p><small class="text-muted"><i class="fa fa-clock-o"></i> {{ meta.Date }}</small></p>
+    <article>
+        {{ html|safe }}
+    </article>
+{% endblock %}
