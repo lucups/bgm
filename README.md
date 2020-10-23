@@ -3,6 +3,7 @@
 BGM means a blog program build by [Gin Web Framework](https://github.com/gin-gonic/gin) and [Markdown](https://tools.ietf.org/html/rfc7763).
 
 - [中文版](README_CN.md)
+- [Demo](http://bgm.crowall.com/)
 
 ### Download & Start
 

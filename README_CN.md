@@ -2,6 +2,9 @@
 
 BGM 是指使用 [Gin Web Framework](https://github.com/gin-gonic/gin) 和 [Markdown](https://tools.ietf.org/html/rfc7763) 开发的博客系统。
 
+- [English](README.md)
+- [在线演示](http://bgm.crowall.com/)
+
 ### 下载&启动
 
 从 [Github 的 BGM Release 页面](https://github.com/lucups/bgm/releases/) 下载最新版本的二进制文件，解压，即可开始运行。
