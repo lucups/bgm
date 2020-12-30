@@ -68,10 +68,11 @@ It's based on [Gin](https://github.com/gin-gonic/gin), and use [Markdown](https:
 You just need to simply start it, and start writing markdown format text, you can see the rendering effect, convenient and fast.
 Welcome to use it！
 ```
-###Content refresh
+### Content refresh
+
 In order to speed up the access, the article list will be loaded only once when the program starts, and then it will be directly put into the memory. Therefore, if you add new articles or modify the meta information of articles, you need to call the refresh interface.
 
-The refresh interface path is`/_ Refresh ', which means "Refresh"` http://localhost :9600/_ refresh` 。
+The refresh interface path is`/_ Refresh`, which means "Refresh": ` http://localhost :9600/_ refresh` 。
 
 The new article or modified meta information will not take effect until it is refreshed.
 

@@ -26,8 +26,11 @@ type PostMeta struct {
 }
 
 type SiteInfo struct {
-	Name string
-	url  string
+	Icon      string
+	Name      string
+	Url       string
+	IndexName string
+	Theme     string
 }
 
 func formatAsDate(t time.Time) string {
@@ -123,21 +126,33 @@ func main() {
 	addr, _ := section.GetKey("addr")
 
 	section = cfg.Section("site")
+	siteIcon, _ := section.GetKey("icon")
 	siteName, _ := section.GetKey("name")
 	siteUrl, _ := section.GetKey("url")
-	site := SiteInfo{siteName.String(), siteUrl.String()}
+	indexName := "文章"
+	if section.HasKey("indexName") {
+		indexNameSec, _ := section.GetKey("indexName")
+		indexName = indexNameSec.String()
+	}
+	theme := "default"
+	if section.HasKey("theme") {
+		themeSec, _ := section.GetKey("theme")
+		theme = themeSec.String()
+	}
+	site := SiteInfo{siteIcon.String(), siteName.String(), siteUrl.String(), indexName, theme}
 
 	r := gin.Default()
 	r.Static("/static", "static")
+	r.Static("/theme", "templates/"+theme)
 	r.Use(gin.Recovery())
 	r.SetFuncMap(template.FuncMap{
 		"formatAsDate": formatAsDate,
 	})
 
 	if gin.IsDebugging() {
-		r.HTMLRender = utils.NewDebug("templates")
+		r.HTMLRender = utils.NewDebug("templates/" + theme)
 	} else {
-		r.HTMLRender = utils.NewProduction("templates")
+		r.HTMLRender = utils.NewProduction("templates/" + theme)
 	}
 
 	r.GET("/info", func(c *gin.Context) {
