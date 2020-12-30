@@ -143,16 +143,16 @@ func main() {
 
 	r := gin.Default()
 	r.Static("/static", "static")
-	r.Static("/theme", "templates/"+theme)
+	r.Static("/theme", "themes/"+theme)
 	r.Use(gin.Recovery())
 	r.SetFuncMap(template.FuncMap{
 		"formatAsDate": formatAsDate,
 	})
 
 	if gin.IsDebugging() {
-		r.HTMLRender = utils.NewDebug("templates/" + theme)
+		r.HTMLRender = utils.NewDebug("themes/" + theme)
 	} else {
-		r.HTMLRender = utils.NewProduction("templates/" + theme)
+		r.HTMLRender = utils.NewProduction("themes/" + theme)
 	}
 
 	r.GET("/info", func(c *gin.Context) {
