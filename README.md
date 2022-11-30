@@ -36,7 +36,7 @@ data/posts # Put your articles here.
 data/pages # Put single pages, now there is only one page: about.md
 ```
 
-Tips：the suffix of all files should be `.md`。
+Tips：the suffix of all files should be `.md`.
 
 The post/page's content will split two parts, 
 
@@ -72,7 +72,7 @@ Welcome to use it！
 
 In order to speed up the access, the article list will be loaded only once when the program starts, and then it will be directly put into the memory. Therefore, if you add new articles or modify the meta information of articles, you need to call the refresh interface.
 
-The refresh interface path is`/_ Refresh`, which means "Refresh": ` http://localhost :9600/_ refresh` 。
+The refresh interface path is`/_ Refresh`, which means "Refresh": ` http://localhost :9600/_ refresh` .
 
 The new article or modified meta information will not take effect until it is refreshed.
 
@@ -85,8 +85,8 @@ Of course, you can modify the native template file to achieve the desired effect
 ### Dependencies
 
 - [Gin Web Framework](https://github.com/gin-gonic/gin) A web framework written in Go. 
-- [Pongo2](https://github.com/flosch/pongo2) A Django-syntax like templating-language. (Also like Jinja/Twig/Nunjucks)
-- [goldmark](https://github.com/yuin/goldmark) Parse Markdown。
-- [ini](github.com/go-ini/ini) Parse `ini`。
-- [yaml](gopkg.in/yaml.v2) Parse `YAML`。
+- [Pongo2](https://github.com/flosch/pongo2) A Django-syntax like templating-language. (Also like Jinja/Twig/Nunjucks).
+- [goldmark](https://github.com/yuin/goldmark) Parse Markdown.
+- [ini](https://github.com/go-ini/ini) Parse `ini`.
+- [yaml](https://gopkg.in/yaml.v2) Parse `YAML`.
 
